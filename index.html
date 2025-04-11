@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forzon Interface</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto&family=Poppins&family=Lato&family=Montserrat&family=Open+Sans&family=Oswald&family=Merriweather&family=Raleway&family=Ubuntu&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="vashu.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="sidebar">
+            <div class="logo">
+                Forzon<br>
+                <small>You Think, We Create...</small>
+            </div>
+            <button onclick="addText()">Add Text</button>
+            <button onclick="showPresets()">Homepage Presets</button>
+        </div>
+        <div class="topbar">
+            <div class="tab">Frame</div>
+            <div class="tab">Elements</div>
+            <div class="tab">Templates</div>
+        </div>
+        <div class="canvas" id="canvasArea"></div>
+        <div class="right-panel">
+            <h3>Properties</h3>
+            <div class="properties-tabs">
+                <div class="tab active">Customization</div>
+                <div class="tab">Library</div>
+            </div>
+            <div class="properties-content" id="propertiesPanel">
+                <p>Select a text to edit.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Presets Modal -->
+<div id="presetModal" style="display:none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.6); z-index: 999; align-items: center; justify-content: center;">
+    <div style="background: white; padding: 30px; width: 80%; max-height: 90vh; overflow-y: auto; border-radius: 12px; box-shadow: 0 0 20px rgba(0,0,0,0.3); position: relative;">
+      <h2 style="margin-bottom: 20px;">Choose a Homepage Preset</h2>
+      <button onclick="closePresetModal()" style="position: absolute; top: 15px; right: 20px; background: red; color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 5px;">X</button>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;">
+        <div class="preset-card" onclick="applyPreset('hotel')">🏨 Hotel Management</div>
+        <div class="preset-card" onclick="applyPreset('travel')">✈️ Travel Website</div>
+        <div class="preset-card" onclick="applyPreset('product')">🛍️ Product-Based Company</div>
+        <div class="preset-card" onclick="applyPreset('education')">🎓 Educational Site</div>
+        <!-- Add more preset cards here -->
+      </div>
+    </div>
+  </div>
+  
+    <script src="vashu.js"></script>
+</body>
+
+</html>
